@@ -1,16 +1,14 @@
-# Personal Knowledge Hub (Second Brain)
+# Personal Hub
 
-A self-hosted personal productivity and knowledge management app. Designed for developers, builders, and lifelong learners to capture, organize, and reflect on their knowledge, project work, online discoveries, and blog ideas.
+A personal website and dashboard to showcase your GitHub projects, Substack articles, and more—all in one place. Built for developers and creators who want a modern, minimalist, and self-hosted way to present their work, writing, and online presence.
 
 ## Features
 
-- 📥 Capture entries for: learning notes, project updates, blog ideas, online finds
-- 🔍 View all entries in a searchable dashboard
-- 📊 Tag cloud, entry type stats, learning streaks
-- 🔗 Auto-link GitHub projects and embed Tweet previews (future)
-- 💾 Local SQLite database with timestamped entries
-- 🎨 Clean, modern UI with dashboard visuals
-- 🔐 Private by default, but can be made remotely accessible via Ngrok or Tailscale
+- 🛠 **GitHub Integration:** Display your latest repositories and view project READMEs directly on your site.
+- 📰 **Substack Integration:** Show your latest Substack articles with thumbnails and summaries.
+- 📊 **Dashboard:** Clean, modern UI with a responsive layout for desktop and mobile.
+- 🔍 **Quick Access:** Jump to your projects, blog, or journal from a single hub.
+- 🔐 **Private by default:** Runs locally or on your own server (Raspberry Pi, Linux, etc.).
 
 ## Tech Stack
 - **Language:** Python 3
@@ -40,7 +38,7 @@ A self-hosted personal productivity and knowledge management app. Designed for d
    ```bash
    python run.py
    ```
-   The app will be available at `http://localhost:5050`.
+   The app will be available at `http://localhost:5050` (or your Pi's IP).
 
 ## Environment Variables Example
 ```
@@ -51,8 +49,8 @@ SUBSTACK_URL=https://yourname.substack.com/feed
 ```
 
 ## Usage
-- Visit the dashboard to capture ideas, view project updates, and see your latest Substack articles.
-- Click "View README" on any GitHub project to see its overview.
+- Visit your dashboard to see your latest GitHub projects and Substack posts.
+- Click "View README" to see project overviews.
 - Mobile-friendly and can be accessed remotely with Ngrok or Tailscale.
 
 ## Folder Structure
