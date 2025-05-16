@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Hub{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="/" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-700 text-lg">Personal Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="/" class="py-4 px-2 {% if request.path == '/' %}text-blue-600 border-b-2 border-blue-600 font-bold{% else %}text-gray-500 hover:text-gray-900{% endif %}">Home</a>
+                        <a href="/projects" class="py-4 px-2 {% if request.path.startswith('/projects') %}text-blue-600 border-b-2 border-blue-600 font-bold{% else %}text-gray-500 hover:text-gray-900{% endif %}">Projects</a>
+                        <a href="/journal" class="py-4 px-2 {% if request.path.startswith('/journal') %}text-blue-600 border-b-2 border-blue-600 font-bold{% else %}text-gray-500 hover:text-gray-900{% endif %}">Journal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html> 
